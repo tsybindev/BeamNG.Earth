@@ -25,7 +25,7 @@ PLACE = {
     "poland": "Poland", "czechia": "Czechia", "estonia": "Estonia", "flanders": "Flanders (Belgium)",
     "de_bayern": "Bavaria", "de_nrw": "North Rhine-Westphalia", "de_bw": "Baden-Wurttemberg",
     "de_nds": "Lower Saxony", "de_berlin": "Berlin", "de_hessen": "Hesse", "japan": "Japan",
-    "sterlitamak": "Sterlitamak",
+    "bashkortostan": "Bashkortostan",
     "au_nsw": "New South Wales", "au_tas": "Tasmania", "ontario": "Ontario",
 }
 
@@ -104,12 +104,12 @@ REGIONAL = {
     "de_hessen": ("https://www.gds-srv.hessen.de/cgi-bin/lika-services/ogc-free-images.ows?LAYERS=he_dop20_rgb&" + WMS,
                   "HVBG Hessen DOP20", (49.39, 7.77, 51.66, 10.24), "export", False),
     # --- Asia / Oceania / Americas -------------------------------------------------------------------------------
-    # Private-fork experiment (tsybindev, 2026-10-31): Sterlitamak (Bashkortostan, RU) has no open regional
+    # Private-fork experiment (tsybindev, 2026-10-31): Bashkortostan (RU) has no open regional
     # orthophoto, so it otherwise falls back to the 10 m Sentinel-2 mosaic. Esri World Imagery is used here
     # for local testing only: upstream declined the same source for India in PR #146 ("its terms do not
     # allow this use"), so this entry is NOT suitable for upstreaming or redistribution.
-    "sterlitamak": ("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-                    "Esri, Maxar, Earthstar Geographics", (53.55, 55.87, 53.73, 56.06), "xyz", False),
+    "bashkortostan": ("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                    "Esri, Maxar, Earthstar Geographics", (51.50, 53.10, 56.65, 60.12), "xyz", False),
     "japan": ("https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg", "GSI Japan (Geospatial Information Authority of Japan) seamless photo",
               (24.0, 122.9, 45.6, 146.0), "xyz", False),
     "au_nsw": ("https://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer/tile/{z}/{y}/{x}",
