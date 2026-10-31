@@ -911,6 +911,11 @@ class NetworkImageryTest(unittest.TestCase):
         self.assertEqual(set(used), {"eox2023"})
         self.assertGreater(rgb.std(), 5)
 
+    def test_sterlitamak_uses_esri_regional(self):
+        rgb, used = self.render(53.6246, 55.9500, px=128)   # Sterlitamak, RU (z16+: regional XYZ min zoom)
+        self.assertEqual(set(used), {"sterlitamak"})
+        self.assertGreater(rgb.std(), 5)
+
     def test_open_ocean(self):
         rgb, used = self.render(30.0, -140.0, size=4096.0)
         self.assertEqual(set(used), {"eox2016"})       # uniform deep blue from both EOX layers
